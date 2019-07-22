@@ -1,0 +1,7 @@
+Filename	Samplename	Treatment	Replicate	Batcheffect
+C7KGBACXX_l01n01_nlp7_mchx_pn_md_25.3510000003ce65.fastq.gz	25_nlp7_mchx_pn_md	mchx_pn_pd	1	1
+C7KGBACXX_l01n01_nlp7_mchx_pn_md_26.3510000003ce8f.fastq.gz	26_nlp7_mchx_pn_md	mchx_pn_md	2	1
+C7KGBACXX_l01n01_nlp7_mchx_pn_md_27.3510000003ceb5.fastq.gz	27_nlp7_mchx_pn_md	mchx_pn_md	3	1
+C7KGBACXX_l01n01_nlp7_mchx_pn_pd_28.3510000003cef9.fastq.gz	28_nlp7_mchx_pn_pd	mchx_pn_pd	1	1
+C7KGBACXX_l01n01_nlp7_mchx_pn_pd_29.3510000003cf21.fastq.gz	29_nlp7_mchx_pn_pd	mchx_pn_pd	2	1
+C7KGBACXX_l01n01_nlp7_mchx_pn_pd_30.3510000003cf4b.fastq.gz	30_nlp7_mchx_pn_pd	mchx_pn_pd	3	1

@@ -1,0 +1,12 @@
+#This analyses generate the heatmap with the chip-seq results for NLP7 at each time point. The analysis was done in Unix. 
+#Install deeptools (https://deeptools.readthedocs.io/en/develop/content/installation.html)
+We used deeptools(v3.0.1) as follows:
+
+#Generate bigWig files and normalize .bam files by RPKM calculation. Do this step for each .bam file. 
+bamCoverage -b nlp7_chip_0_pchx.nodup.bam -o nlp7_chip_0.bw --normalizeUsing RPKM
+
+#ComputeMatrix tool calculates scores per genome regions and prepares an intermediate file that can be used to plot the Heatmap. We used the sorted peaks identified by Macs2 in .bed format.
+computeMatrix reference-point -S nlp7_chip_0.bw nlp7_5.bw nlp7_10.bw nlp7_30.bw nlp7_180.bw -R peaks_sorted.bed --referencePoint center -a 1000 -b 1000 -out result_heatmap
+
+#To plot the heatmap
+plotHeatmap -m result_heatmap -out ./result_heatmap.pdf --colorMap Purples --sortRegions descend

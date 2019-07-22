@@ -1,0 +1,20 @@
+#This analyses was done to generate the DamID profile for NLP7 close to transcribed regions.
+The analysis was done in Unix.
+
+#Install deeptools (https://deeptools.readthedocs.io/en/develop/content/installation.html) 
+#We used deeptools(v3.0.1) as follows:
+
+#bamCompare can be used to generate a bigWig file based on two BAM files that are compared to each other while being simultaneously normalized for sequencing depth.
+bamCompare -b1 NLP7_dam_nlp7_r1.nodup.bam -b2 nlp7_dam_gr_r1.nodup.bam -o nlp7_signal.bw -bs 10 -p max 
+
+#Extract the CDS coordinates from Araport11_protein_coding.201606.bed for the genes bound by NLP7 according to DamID (identified by Macs2).  
+grep -i -Ff damid_bound_genes.bed Araport11_protein_coding.201606.bed > damid_bound_genes_coordinates.bed
+
+#Extract 1-3 columns with the coordinates
+cat damid_bound_genes_coordinates.bed |cut -f1-3 > just_coordinates.bed
+
+#ComputeMatrix tool calculates scores per genome regions and prepares an intermediate file that can be used to plot the profile.
+computeMatrix scale-regions -S nlp7_signal.bw -R just_coordinates.bed -a 1000 -b 1000 -o nlp7.regions 
+
+#Plot DamID profile for NLP7
+plotProfile -m nlp7_damid_profile -o nlp7_damid_profile.pdf --plotType se --colors orange
