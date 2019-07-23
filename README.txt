@@ -11,10 +11,10 @@ fastx_toolkit (v0.0.14)
 Bowtie2 (v2.3.2)
 MACS2 (version 2.1.1)
 
-chip_seq_and_damid_seq/chip_seq_profiles/ folder contains instructions to plot a heatmap and profile of ChIP-seq data.
+chip_seq_and_damid_seq/chip_seq_profiles/ folder contains instructions to generate a heatmap and a profile of ChIP-seq data.
 We used the following versions of the program:
 DeepTools (v3.0.1) 
 
-chip_seq_and_damid_seq/damid_profiles/ folder contains instructions to plot a profile of DamID-seq data.
+chip_seq_and_damid_seq/damid_profiles/ folder contains instructions to generate a profile of DamID-seq data.
 We used the following versions of the program:
 DeepTools (v3.0.1)
