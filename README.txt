@@ -1,4 +1,4 @@
-#The code provide in these folders allows to analyze raw (fast.qz) data for RNA-seq, ChIP-seq and DamID-seq.
+#The code provide in these folders allows to analyze raw (fastq.qz) data for RNA-seq, ChIP-seq and DamID-seq.
 rna_seq/ folder contains scripts for Preprocessing, Alignment, Get Read Counts and calculate differential gene expression with DESeq2.
 We used the following versions of the programs:
 fastx_toolkit (v0.0.14)
